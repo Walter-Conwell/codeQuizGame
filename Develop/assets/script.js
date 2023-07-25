@@ -54,8 +54,8 @@ var questions = [
 let currentQuestionIndex = 0;
 
 // current question function
-function displayQuestion(index) {
-  const currentQuestion = questions[index];
+function displayQuestion() {
+  const currentQuestion = questions[currentQuestionIndex];
   questionText.textContent = currentQuestion.title;
   choicesList.innerHTML = "";
 
@@ -67,16 +67,19 @@ function displayQuestion(index) {
   });
 }
 
-// Event listener for the Start button
-startBtn.addEventListener("click", function () {
-  console.log("startBtn clicked, redirecting to questions.html");
-  // Redirect to the questions.html page when the quiz starts
-  window.location.href = "questions.html";
-});
+// there was no more start button at questions page.
+if (document.getElementById("startBtn")) {
+  // Event listener for the Start button
+  startBtn.addEventListener("click", function () {
+    console.log("startBtn clicked, redirecting to questions.html");
+    // Redirect to the questions.html page when the quiz starts
+    window.location.href = "questions.html";
+  });
+}
 
 // If on questions.html, display the questions
 if (window.location.href.includes("questions.html")) {
-  displayQuestion(currentQuestionIndex);
+  displayQuestion();
 
   // Event listener for the Next Question button
   nextBtn.addEventListener("click", function () {
