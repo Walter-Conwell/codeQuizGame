@@ -2,6 +2,7 @@
 const startBtn = document.querySelector("#startBtn");
 const questionText = document.querySelector("#questionText");
 const choicesList = document.querySelector("#choicesList");
+const choiceBtn = document.querySelector("#choiceBtn");
 const nextBtn = document.querySelector("#nextBtn");
 
 // Questions array
