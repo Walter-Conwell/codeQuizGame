@@ -10,15 +10,16 @@
       crossorigin="anonymous"
     />
     <title>Code-nundrum: the Quiz Game: highScores</title>
-    <link rel="stylesheet" href="./assets/styles.css" />
+    <link rel="stylesheet" href="./Develop/assets/styles.css" />
   </head>
-  <body>
-    <head class="head">
-      High Scores!
-    </head>
+  <body id="bodyContainer">
+    <head class="head"></head>
+
+    <h1 id="pageTitle">High Scores!!!</h1>
     <header>
-      <li>1.</li>
-      <li>2.</li>
+      <div class="container-fluid">
+        <ul class="scoreList"></ul>
+      </div>
     </header>
     <button class="btn">Go Back</button>
     <!-- takes player back to index.html -->
@@ -27,7 +28,7 @@
     <!-- clear highscores empties local storage -->
 
     <!-- maybe have 3 timer settings as "difficulty" setting -->
-
+    <script src="./highscores.js"></script>
     <script src="./assets/script.js"></script>
   </body>
 </html>

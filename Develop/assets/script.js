@@ -61,10 +61,18 @@ function displayQuestion() {
   choicesList.innerHTML = "";
 
   currentQuestion.choices.forEach((choice) => {
+    var answer = "";
     const listItem = document.createElement("li");
     listItem.className = "list-group-item";
     listItem.textContent = choice;
     choicesList.appendChild(listItem);
+    listItem.addEventListener("click", function () {
+      this.style = "background-color: darkblue";
+      answer = this.textContent;
+      if (answer != questions[currentQuestionIndex].answer) {
+        time -= 5;
+      }
+    });
   });
 }
 
@@ -92,7 +100,7 @@ if (window.location.href.includes("questions.html")) {
       // Handle the end of the questions (you can redirect to the next page or show a message)
       alert("End of questions");
       // Redirect back to the main page (you can change this to wherever you want to redirect after the quiz)
-      window.location.href = "index.html";
+      window.location.href = "highscores.html";
     }
   });
 }
