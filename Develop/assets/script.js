@@ -67,7 +67,7 @@ function displayQuestion() {
     listItem.textContent = choice;
     choicesList.appendChild(listItem);
     listItem.addEventListener("click", function () {
-      this.style = "background-color: darkblue";
+      this.style = "background-color: bisque";
       answer = this.textContent;
       if (answer != questions[currentQuestionIndex].answer) {
         time -= 5;
@@ -105,4 +105,6 @@ if (window.location.href.includes("questions.html")) {
   });
 }
 
-//api fetch for inserting array??
+//todo
+// make timer stop at zero and go to highscores.html after recording score
+// make high scores btn links work
