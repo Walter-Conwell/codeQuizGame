@@ -106,5 +106,4 @@ if (window.location.href.includes("questions.html")) {
 }
 
 //todo
-// make timer stop at zero and go to highscores.html after recording score
 // make high scores btn links work
