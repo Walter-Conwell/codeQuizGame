@@ -1,4 +1,3 @@
-// to do - get page to go to next page.
 const startBtn = document.querySelector("#startBtn");
 const questionText = document.querySelector("#questionText");
 const choicesList = document.querySelector("#choicesList");
@@ -76,35 +75,29 @@ function displayQuestion() {
   });
 }
 
-// there was no more start button at questions page.
 if (document.getElementById("startBtn")) {
-  // Event listener for the Start button
   startBtn.addEventListener("click", function () {
     console.log("startBtn clicked, redirecting to questions.html");
-    // Redirect to the questions.html page when the quiz starts
+    // Redirect to the questions.html
     window.location.href = "questions.html";
   });
 }
 
-// If on questions.html, display the questions
+// only IF on questions.html, display the questions
 if (window.location.href.includes("questions.html")) {
   displayQuestion();
 
-  // Event listener for the Next Question button
+  // Event listener - next question button
   nextBtn.addEventListener("click", function () {
     currentQuestionIndex++;
     if (currentQuestionIndex < questions.length) {
-      // Display the next question if there are more questions
       displayQuestion(currentQuestionIndex);
     } else {
-      // Handle the end of the questions (you can redirect to the next page or show a message)
       alert("End of questions");
-      // Redirect back to the main page (you can change this to wherever you want to redirect after the quiz)
       window.location.href = "highscores.html";
     }
   });
 }
 
 //todo
-// make timer stop at zero and go to highscores.html after recording score
-// make high scores btn links work
+// make timer stop at zero.
