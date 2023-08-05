@@ -16,7 +16,7 @@
 
 - repo link: https://github.com/Walter-Conwell/codeQuizGame
 
-- Live deployment link:
+- Live deployment link: https://walter-conwell.github.io/codeQuizGame/
 
 ### Sources
 
