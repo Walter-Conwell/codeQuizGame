@@ -1,3 +1,4 @@
+// variable declarations
 const startBtn = document.querySelector("#startBtn");
 const questionText = document.querySelector("#questionText");
 const choicesList = document.querySelector("#choicesList");
@@ -59,6 +60,7 @@ function displayQuestion() {
   questionText.textContent = currentQuestion.title;
   choicesList.innerHTML = "";
 
+  // questions array is iterated through until the final index.
   currentQuestion.choices.forEach((choice) => {
     var answer = "";
     const listItem = document.createElement("li");
@@ -69,6 +71,7 @@ function displayQuestion() {
       this.style = "background-color: bisque";
       answer = this.textContent;
       if (answer != questions[currentQuestionIndex].answer) {
+        // 5 seconds is taken off if the answer chosen doesn't fulfill the "answer" value.
         time -= 5;
       }
     });
@@ -98,6 +101,3 @@ if (window.location.href.includes("questions.html")) {
     }
   });
 }
-
-//todo
-// make timer stop at zero.

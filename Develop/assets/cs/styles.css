@@ -108,6 +108,7 @@ li {
   background-color: #f39a9d;
 }
 
+/* mobile responsiveness */
 @media (max-width: 690px) {
   .start-Btn {
     font-size: 24px;
